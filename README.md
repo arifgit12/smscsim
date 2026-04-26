@@ -95,3 +95,5 @@ Integration test verifies basic delivery receipt functionality across single and
 * [Google Guava](https://github.com/google/guava)
 
 ## License
+
+This project is licensed under the [MIT License](LICENSE).
