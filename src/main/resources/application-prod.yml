@@ -1,0 +1,28 @@
+smsc:
+  ports: 34567,34568,34569
+  server:
+    port: 10001
+    max-connection-size: 10
+    non-blocking-sockets-enabled: true
+    default-request-expiry-timeout: 30000
+    default-window-monitor-interval: 15000
+    default-window-size: 100
+    default-window-wait-timeout: 30000
+    default-session-counters-enabled: true
+    jmx-enabled: true
+  rate-sender:
+    segments: 2
+    dest-address-digits: "1111"
+  delivery-receipt:
+    min-delay-ms: 5000
+    random-delta-ms: 5000
+
+spring:
+  jmx:
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+    net.voldrich.smscsim: DEBUG
+    org.springframework: WARN
