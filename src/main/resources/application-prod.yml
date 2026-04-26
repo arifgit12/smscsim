@@ -1,5 +1,5 @@
 smsc:
-  ports: 34567,34568,34569
+  ports: 64567,64568,64569
   server:
     port: 10001
     max-connection-size: 10

@@ -35,12 +35,12 @@ This produces an executable fat JAR at `target/smscsim.jar`.
 
 ## How to run
 
-Start SMPP servers on ports 34567, 34568 and 34569:
+Start SMPP servers on ports 64567, 64568 and 64569:
 
     java --add-opens java.base/java.nio=ALL-UNNAMED \
          --add-opens java.base/sun.nio.ch=ALL-UNNAMED \
          --add-opens java.base/java.lang=ALL-UNNAMED \
-         -jar target/smscsim.jar --smsc.ports=34567,34568,34569
+         -jar target/smscsim.jar --smsc.ports=64567,64568,64569
 
 The `--add-opens` flags are required for Netty 3.x compatibility with Java 17+.
 
@@ -66,7 +66,7 @@ Example with custom settings:
          --add-opens java.base/sun.nio.ch=ALL-UNNAMED \
          --add-opens java.base/java.lang=ALL-UNNAMED \
          -jar target/smscsim.jar \
-         --smsc.ports=34567,34568 \
+         --smsc.ports=64567,64568 \
          --smsc.delivery-receipt.min-delay-ms=1000
 
 ## Actuator
