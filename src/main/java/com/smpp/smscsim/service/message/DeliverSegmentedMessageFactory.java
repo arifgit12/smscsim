@@ -1,10 +1,10 @@
-package com.smpp.smscsim.spring.message;
+package com.smpp.smscsim.service.message;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.smpp.smscsim.server.SmppPduUtils;
-import com.smpp.smscsim.spring.BaseSender;
+import com.smpp.smscsim.service.BaseSender;
 import com.cloudhopper.commons.charset.CharsetUtil;
 import com.cloudhopper.smpp.pdu.DeliverSm;
 

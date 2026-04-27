@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>net.voldrich.smscsim</groupId>
+	<groupId>com.smpp.smscsim</groupId>
 	<artifactId>smscsim</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>

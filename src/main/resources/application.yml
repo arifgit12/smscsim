@@ -1,4 +1,7 @@
 smsc:
+  auth:
+    system-id: stct
+    password: stct1234
   ports: 64567,64568,64569
   server:
     port: 10001
@@ -17,8 +20,8 @@ smsc:
   delivery-sender:
     worker-count: 4
   delivery-receipt:
-    min-delay-ms: 5000
-    random-delta-ms: 5000
+    min-delay-ms: 500
+    random-delta-ms: 100
 
 spring:
   jmx:
@@ -29,5 +32,5 @@ spring:
 logging:
   level:
     root: INFO
-    net.voldrich.smscsim: DEBUG
+    com.smpp.smscsim: DEBUG
     org.springframework: WARN

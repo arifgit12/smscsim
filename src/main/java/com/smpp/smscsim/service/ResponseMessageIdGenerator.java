@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring;
+package com.smpp.smscsim.service;
 
 public interface ResponseMessageIdGenerator {
 

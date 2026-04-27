@@ -1,11 +1,11 @@
-package com.smpp.smscsim.spring;
+package com.smpp.smscsim.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.smpp.smscsim.spring.auto.DelayedRequestSenderImpl;
-import com.smpp.smscsim.spring.auto.SmppSessionManager;
+import com.smpp.smscsim.service.auto.DelayedRequestSenderImpl;
+import com.smpp.smscsim.service.auto.SmppSessionManager;
 import com.cloudhopper.smpp.SmppServerSession;
 import com.cloudhopper.smpp.pdu.PduRequest;
 

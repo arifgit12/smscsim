@@ -1,7 +1,7 @@
-package com.smpp.smscsim.spring.message;
+package com.smpp.smscsim.service.message;
 
 import com.smpp.smscsim.server.SmppPduUtils;
-import com.smpp.smscsim.spring.auto.SmppSessionManager;
+import com.smpp.smscsim.service.auto.SmppSessionManager;
 import com.cloudhopper.smpp.pdu.DeliverSm;
 import com.cloudhopper.smpp.type.Address;
 

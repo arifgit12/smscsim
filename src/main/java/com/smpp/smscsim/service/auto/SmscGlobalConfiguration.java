@@ -1,10 +1,11 @@
-package com.smpp.smscsim.spring.auto;
+package com.smpp.smscsim.service.auto;
 
-import com.smpp.smscsim.spring.DeliveryReceiptScheduler;
+import com.smpp.smscsim.service.DeliveryReceiptScheduler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.smpp.smscsim.spring.ResponseMessageIdGenerator;
+import com.smpp.smscsim.service.ResponseMessageIdGenerator;
 
 @Component
 public class SmscGlobalConfiguration {
@@ -20,6 +21,12 @@ public class SmscGlobalConfiguration {
 
     @Autowired
     private DeliveryReceiptScheduler deliveryReceiptScheduler;
+
+	@Value("${smsc.auth.system-id:stct}")
+	private String systemId;
+
+	@Value("${smsc.auth.password:stct1234}")
+	private String password;
 
 	public DelayedRequestSenderImpl getDeliverSender() {
 		return deliverSender;
@@ -52,4 +59,20 @@ public class SmscGlobalConfiguration {
     public void setDeliveryReceiptScheduler(DeliveryReceiptScheduler deliveryReceiptScheduler) {
         this.deliveryReceiptScheduler = deliveryReceiptScheduler;
     }
+
+	public String getSystemId() {
+		return systemId;
+	}
+
+	public void setSystemId(String systemId) {
+		this.systemId = systemId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

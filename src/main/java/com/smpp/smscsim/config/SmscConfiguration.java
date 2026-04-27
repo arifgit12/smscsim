@@ -1,10 +1,10 @@
 package com.smpp.smscsim.config;
 
 import com.cloudhopper.smpp.SmppServerConfiguration;
-import com.smpp.smscsim.spring.SmscRateSender;
-import com.smpp.smscsim.spring.auto.ResponseMessageIdGeneratorImpl;
-import com.smpp.smscsim.spring.auto.SmppSessionManager;
-import com.smpp.smscsim.spring.message.DeliverSegmentedMessageFactory;
+import com.smpp.smscsim.service.SmscRateSender;
+import com.smpp.smscsim.service.auto.ResponseMessageIdGeneratorImpl;
+import com.smpp.smscsim.service.auto.SmppSessionManager;
+import com.smpp.smscsim.service.message.DeliverSegmentedMessageFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;

@@ -1,6 +1,6 @@
 package com.smpp.smscsim.config;
 
-import com.smpp.smscsim.spring.auto.SmppSessionManager;
+import com.smpp.smscsim.service.auto.SmppSessionManager;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;

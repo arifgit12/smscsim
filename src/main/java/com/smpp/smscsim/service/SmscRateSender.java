@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring;
+package com.smpp.smscsim.service;
 
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 
-import com.smpp.smscsim.spring.message.MessageFactory;
+import com.smpp.smscsim.service.message.MessageFactory;
 
 /**
  * Sends Deliver pdu's at specific rate

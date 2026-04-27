@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring.message;
+package com.smpp.smscsim.service.message;
 
 import com.cloudhopper.smpp.pdu.PduRequest;
 

@@ -1,6 +1,6 @@
-package com.smpp.smscsim.spring.auto;
+package com.smpp.smscsim.service.auto;
 
-import com.smpp.smscsim.spring.DeliveryReceiptScheduler;
+import com.smpp.smscsim.service.DeliveryReceiptScheduler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

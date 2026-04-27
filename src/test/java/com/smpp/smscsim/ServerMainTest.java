@@ -14,7 +14,7 @@ import com.cloudhopper.smpp.type.Address;
 import com.cloudhopper.smpp.type.SmppChannelException;
 import com.cloudhopper.smpp.type.SmppInvalidArgumentException;
 import com.smpp.smscsim.server.SmscServer;
-import com.smpp.smscsim.spring.auto.SmscGlobalConfiguration;
+import com.smpp.smscsim.service.auto.SmscGlobalConfiguration;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,8 +32,8 @@ public class ServerMainTest {
     private static final Logger logger = LoggerFactory.getLogger(ServerMainTest.class);
 
     private static final int PORT = 12345;
-    private static final String SYSTEM_ID = "132456";
-    private static final String SYSTEM_ID_2 = "789798";
+    private static final String SYSTEM_ID = "stct";
+    private static final String PASSWORD = "stct1234";
 
     private static final int NUMBER_OF_SUBMITS = 20;
     private static final int NUMBER_OF_SUBMITS_2 = 50;
@@ -70,7 +70,7 @@ public class ServerMainTest {
      **/
     @Test
     public void testSubmitsAndDeliveryReceipts() throws Exception {
-        SmppClient client = new SmppClient("localhost", PORT, SYSTEM_ID);
+        SmppClient client = new SmppClient("localhost", PORT, SYSTEM_ID, PASSWORD);
         BlockingSmppSessionHandler handler = new BlockingSmppSessionHandler();
         SmppSession session = client.connect(handler);
 
@@ -90,7 +90,7 @@ public class ServerMainTest {
      **/
     @Test
     public void testSubmitsAndDeliveryReceipts2() throws Exception {
-        SmppClient client1 = new SmppClient("localhost", PORT, SYSTEM_ID);
+        SmppClient client1 = new SmppClient("localhost", PORT, SYSTEM_ID, PASSWORD);
         BlockingSmppSessionHandler handler1 = new BlockingSmppSessionHandler();
         SmppSession session1 = client1.connect(handler1);
 
@@ -98,7 +98,7 @@ public class ServerMainTest {
             session1.sendRequestPdu(createSubmitWithRegisteredDelivery(), 1000, false);
         }
 
-        SmppClient client2 = new SmppClient("localhost", PORT, SYSTEM_ID_2);
+        SmppClient client2 = new SmppClient("localhost", PORT, SYSTEM_ID, PASSWORD);
         BlockingSmppSessionHandler handler2 = new BlockingSmppSessionHandler();
         SmppSession session2 = client2.connect(handler2);
 

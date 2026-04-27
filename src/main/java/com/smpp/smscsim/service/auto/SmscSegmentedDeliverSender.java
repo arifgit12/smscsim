@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring.auto;
+package com.smpp.smscsim.service.auto;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.smpp.smscsim.server.PduRequestRecord;
 import com.smpp.smscsim.server.SmppPduUtils;
-import com.smpp.smscsim.spring.BaseSender;
+import com.smpp.smscsim.service.BaseSender;
 import com.cloudhopper.commons.charset.CharsetUtil;
 import com.cloudhopper.smpp.SmppConstants;
 import com.cloudhopper.smpp.pdu.DeliverSm;

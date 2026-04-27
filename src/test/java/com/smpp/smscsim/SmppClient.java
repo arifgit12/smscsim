@@ -27,7 +27,7 @@ public class SmppClient {
 
     SmppSessionConfiguration config0;
 
-    public SmppClient(String host, int port, String systemId) {
+    public SmppClient(String host, int port, String systemId, String password) {
         ThreadPoolExecutor executor = (ThreadPoolExecutor)Executors.newCachedThreadPool();
         ScheduledThreadPoolExecutor monitorExecutor = (ScheduledThreadPoolExecutor)Executors.newScheduledThreadPool(1, new ThreadFactory() {
             private AtomicInteger sequence = new AtomicInteger(0);
@@ -49,7 +49,7 @@ public class SmppClient {
         config0.setPort(port);
         config0.setConnectTimeout(10000);
         config0.setSystemId(systemId);
-        config0.setPassword("password");
+        config0.setPassword(password);
         config0.getLoggingOptions().setLogBytes(true);
         // to enable monitoring (request expiration)
         config0.setRequestExpiryTimeout(30000);

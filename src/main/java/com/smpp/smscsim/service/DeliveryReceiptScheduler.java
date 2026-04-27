@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring;
+package com.smpp.smscsim.service;
 
 /**
  * Created by Mavo on 2.8.2014.

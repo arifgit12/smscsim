@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.smpp.smscsim.server.SmscServer;
-import com.smpp.smscsim.spring.auto.SmscGlobalConfiguration;
+import com.smpp.smscsim.service.auto.SmscGlobalConfiguration;
 import com.cloudhopper.smpp.SmppServerConfiguration;
 
 /**

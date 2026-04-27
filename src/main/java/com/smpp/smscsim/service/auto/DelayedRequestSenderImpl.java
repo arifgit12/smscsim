@@ -1,4 +1,4 @@
-package com.smpp.smscsim.spring.auto;
+package com.smpp.smscsim.service.auto;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;

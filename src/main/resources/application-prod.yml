@@ -14,8 +14,8 @@ smsc:
     segments: 2
     dest-address-digits: "1111"
   delivery-receipt:
-    min-delay-ms: 5000
-    random-delta-ms: 5000
+    min-delay-ms: 500
+    random-delta-ms: 500
 
 spring:
   jmx:
@@ -24,5 +24,5 @@ spring:
 logging:
   level:
     root: INFO
-    net.voldrich.smscsim: DEBUG
+    com.smpp.smscsim: DEBUG
     org.springframework: WARN
